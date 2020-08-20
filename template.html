@@ -1,0 +1,24 @@
+<html>
+<div id="app">
+    <div><p>{{ message }}</p></div>
+    <div><input v-model="message"></div>
+    <div><a v-bind:href="url">绑定跳转地址</a></div>
+    <div><button v-on:click="click">点击事件</button></div> 
+</div>
+
+</html>
+<script type="module">
+    import { Vue } from '../toyvue.js'
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!',
+            url: 'https://v1.vuejs.org/guide/syntax.html'
+        },
+        methods: {
+            click: function () {
+                alert('hello')
+            }
+        }
+    })
+</script>
